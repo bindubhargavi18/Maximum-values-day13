@@ -2,7 +2,6 @@ package bridgelabz.maximum;
 
 public class MaxGenerics<T extends Comparable<T>> 
 {
-	int size;
 	T[] arr;
 	T max;
 	MaxGenerics(T arr[])
