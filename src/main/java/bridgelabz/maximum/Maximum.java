@@ -4,14 +4,13 @@ public class Maximum
 {
 	public static void main(String[] args) 
 	{
-		int maximum1=MaxGenerics.maxValue(10,2,3);
-		System.out.println("Maximum of integer: "+maximum1);
+		MaxGenerics<Integer> max=new MaxGenerics<Integer>(new Integer[] {10,20,30});
+		System.out.println("Max in integer array: "+max.maxValue());
 		
-		float maximum2=MaxGenerics.maxValue(22.1f,122.0f,3.3f);
-		System.out.println("Maximum of Float: "+maximum2);
+		MaxGenerics<Float> max1=new MaxGenerics<Float>(new Float[] {10.3f,2.0f,33.0f});
+		System.out.println("Max in float array: "+max1.maxValue());
 		
-		String maximum3=MaxGenerics.maxValue("Python","Java","JavaScript");
-		System.out.println("Maximum of String: "+maximum3);
-		
+		MaxGenerics<String> max2=new MaxGenerics<String>(new String[] {"Apple","Peach","Banana"});
+		System.out.println("Max in string array: "+max2.maxValue());
 	}
 }

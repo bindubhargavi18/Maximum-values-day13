@@ -9,21 +9,24 @@ public class StringTest
 	@Test
 	public void test1() 
 	{
-		String result=MaxGenerics.maxValue("Peach","Banana","Apple");
+		MaxGenerics<String> max=new MaxGenerics<String>(new String[] {"Apple","Peach","Banana"});
+		String result=max.maxValue();
 		assertEquals("Peach",result);
 	}
 	
 	@Test
 	public void test2() 
 	{
-		String result=MaxGenerics.maxValue("Java","Python","JavaScript");
-		assertEquals("Python",result);
+		MaxGenerics<String> max=new MaxGenerics<String>(new String[] {"Peach","Apple","Banana"});
+		String result=max.maxValue();
+		assertEquals("Peach",result);
 	}
 	
 	@Test
 	public void test3() 
 	{
-		String result=MaxGenerics.maxValue("Java","JavaScript","Python");
-		assertEquals("Python",result);
+		MaxGenerics<String> max=new MaxGenerics<String>(new String[] {"Apple","Banana","Peach"});
+		String result=max.maxValue();
+		assertEquals("Peach",result);
 	}
 }
